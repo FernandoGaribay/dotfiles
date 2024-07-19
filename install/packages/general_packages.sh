@@ -41,4 +41,6 @@ packagesPacman=(
   "xdg-user-dirs"
   "xorg-xinput"
   "zsh"
+  "qt5-quickcontrols"
+  "qt5-quickcontrols2"
 )
