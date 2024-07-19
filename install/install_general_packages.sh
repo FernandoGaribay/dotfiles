@@ -9,3 +9,5 @@ for i in "${packagesPacman[@]}"; do
     echo "$i NO existe en los repositorios."
   fi
 done
+
+xdg-user-dirs-update
