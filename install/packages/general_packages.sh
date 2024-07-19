@@ -1,4 +1,5 @@
 packagesPacman=(
+  "curl"
   "arandr"
   "base"
   "base-devel"
