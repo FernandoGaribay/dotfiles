@@ -5,7 +5,7 @@ sudo pacman -Syu --noconfirm
 
 orphans=$(pacman -Qdtq)
 if [ -n "$orphans" ]; then
-  pacman -Rns $orphans
+  sudp pacman -Rns $orphans
 else
   echo -e "\nNo orphan packages\n"
 fi
