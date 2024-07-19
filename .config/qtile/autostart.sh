@@ -11,9 +11,9 @@ picom -f --xrender-sync-fence &
 
 # Inicializar nitrogen (fondo de pantalla)
 #nitrogen --restore &
-bash /home/fernando/Documents/dotfiles/wallpaper.sh init
+bash ~/.config/qtile/wallpaper.sh init &
 
-xinput --set-prop 12 "libinput Accel Speed" -0.3 & 
+xinput --set-prop 12 "libinput Accel Speed" -0.3 &
 
 # Iconos del sistema
 #pipewire &

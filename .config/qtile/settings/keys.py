@@ -40,7 +40,7 @@ keys = [
     Key([mod], "BackSpace", lazy.spawn(home + "/.settings/rofi/files/powermenu/type-3/powermenu.sh"), desc="Script de apagado"),
 
     # Change wallpaper
-    Key([mod, "shift"], "w", lazy.spawn(home + "/.settings/wallpaper.sh"), desc="Update Theme and Wallpaper"),
+    Key([mod, "shift"], "w", lazy.spawn(home + "/.config/qtile/wallpaper.sh"), desc="Update Theme and Wallpaper"),
 
     # Launch ranger
     Key([mod], "e", lazy.spawn("kitty -e ranger")),
