@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo pacman -Sy --noconfirm
 sudo pacman -Syu --noconfirm
 
 orphans=$(pacman -Qdtq)
