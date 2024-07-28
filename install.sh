@@ -32,3 +32,27 @@ fi
 
 echo "Updating system..."
 source $INSTALL_DIR/update_system.sh
+
+echo "Installing Yay..."
+source $INSTALL_DIR/install_yay.sh
+
+echo "Installing Pacman Packages..."
+source $INSTALL_DIR/install_general_packages.sh
+
+echo "Installing Yay Packages..."
+source $INSTALL_DIR/install_yay_packages.sh
+
+echo "Installing Fonts..."
+source $INSTALL_DIR/install_fonts.sh
+
+echo "Enabling services..."
+source $INSTALL_DIR/enable_services.sh
+
+echo "Setting symbolic links..."
+source $INSTALL_DIR/symbolic_links.sh
+
+echo "Installing oh my zsh..."
+source $INSTALL_DIR/install_ho_my_zsh.sh
+
+echo "Installing zsh pluggins..."
+source $INSTALL_DIR/install_zsh_plugins.sh
