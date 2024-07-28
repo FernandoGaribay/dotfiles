@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PREDEFINED_DOTS_PATH="/home/$(whoami)/.dotfiles"
-INSTALL_DIR="/home/$(whoami)/.dotfiles/install/"
+INSTALL_DIR="/home/$(whoami)/.dotfiles/install"
 SCRIPT_PATH="$(readlink -f "$0")"
 DOTFILES_PATH="$(dirname "$SCRIPT_PATH")"
 source $(dirname "$0")/install/colors.sh
@@ -24,7 +24,11 @@ else
 fi
 
 echo "Moving dotfiles directory FROM $DOTFILES_PATH TO $PREDEFINED_DOTS_PATH..."
-mv $DOTFILES_PATH $PREDEFINED_DOTS_PATH || echo "${RED_ERROR}Error moving the directory to $PREDEFINED_DOTS_PATH${NC}" && exit 1
+
+if ! mv $DOTFILES_PATH $PREDEFINED_DOTS_PATH; then
+  echo "${RED_ERROR}Error moving the directory to $PREDEFINED_DOTS_PATH${NC}"
+  exit 1
+fi
 
 echo "Updating system..."
 source $INSTALL_DIR/update_system.sh
