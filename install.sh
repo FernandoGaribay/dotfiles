@@ -56,3 +56,6 @@ source $INSTALL_DIR/install_ho_my_zsh.sh
 
 echo "Installing zsh pluggins..."
 source $INSTALL_DIR/install_zsh_plugins.sh
+
+echo "Installing sddm themes..."
+source $INSTALL_DIR/install_sddm_themes.sh
