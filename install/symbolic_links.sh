@@ -27,3 +27,9 @@ ln -s $HOME/.dotfiles/config/.zshrc $HOME/.zshrc
 # SDDM config file
 sudo rm /etc/sddm.conf
 sudo ln -s $HOME/.dotfiles/config/sddm.conf /etc/sddm.conf
+
+# GTK Themes
+if [ ! -d "$HOME/.themes" ]; then
+	mkdir $HOME/.themes
+fi
+sudo ln -s $HOME/.dotfiles/themes/gtk-themes/DraculaTheme $HOME/.themes/DraculaTheme
