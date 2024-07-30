@@ -59,3 +59,6 @@ source $INSTALL_DIR/install_zsh_plugins.sh
 
 echo "Installing sddm themes..."
 source $INSTALL_DIR/install_sddm_themes.sh
+
+echo "Installing gtk themes..."
+source $INSTALL_DIR/gtk_themes.sh
