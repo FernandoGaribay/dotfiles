@@ -34,3 +34,9 @@ if [ ! -d "$HOME/.themes" ]; then
 	mkdir $HOME/.themes
 fi
 sudo ln -s $HOME/.dotfiles/themes/gtk-themes/DraculaTheme $HOME/.themes/DraculaTheme
+
+# GTK Icons
+if [ ! -d "$HOME/.icons" ]; then
+	mkdir $HOME/.icons
+fi
+sudo ln -s $HOME/.dotfiles/themes/icons/Wings-Light-Icons $HOME/.icons/Wings-Light-Icons
