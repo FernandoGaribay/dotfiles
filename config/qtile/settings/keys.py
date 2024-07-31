@@ -31,22 +31,19 @@ keys = [
     Key([mod], "Return", lazy.spawn("kitty"), desc="Launch terminal"),
 
     # Launch Rofi app selector
-    Key([mod], "m", lazy.spawn(home + "/.settings/rofi/files/launchers/type-1/launcher.sh"), desc="Abrir menu Rofi"),
+    Key([mod], "m", lazy.spawn(home + "/.config/qtile/rofi-menus/rofi/launchers/type-1/launcher.sh"), desc="Abrir menu Rofi"),
 
     # Launch browser
-    Key([mod], "f", lazy.spawn("firefox"), desc="Abrir brave"),
+    Key([mod], "f", lazy.spawn("brave"), desc="Abrir brave"),
 
     # Launch shutdown options
-    Key([mod], "BackSpace", lazy.spawn(home + "/.settings/rofi/files/powermenu/type-3/powermenu.sh"), desc="Script de apagado"),
+    Key([mod], "BackSpace", lazy.spawn(home + "/.config/qtile/rofi-menus/rofi/powermenu/type-2/powermenu.sh"), desc="Script de apagado"),
 
     # Change wallpaper
     Key([mod, "shift"], "w", lazy.spawn(home + "/.config/qtile/wallpaper.sh"), desc="Update Theme and Wallpaper"),
 
-    # Launch ranger
-    Key([mod], "e", lazy.spawn("kitty -e ranger")),
-
     # Launch file explorer
-    Key([mod, "shift"], "e", lazy.spawn("thunar")),
+    Key([mod], "e", lazy.spawn("thunar")),
 
     # Launch FlameShot
     Key([mod, "shift"], "s", lazy.spawn("flameshot gui")),

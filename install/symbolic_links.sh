@@ -3,6 +3,7 @@
 # qtile
 rm $HOME/.config/qtile -rf
 ln -s $HOME/.dotfiles/config/qtile $HOME/.config/qtile
+ln -s $HOME/.dotfiles/config/rofi $HOME/.config/qtile/rofi-menus/rofi
 
 # fastfetch
 rm $HOME/.config/fastfetch -rf
