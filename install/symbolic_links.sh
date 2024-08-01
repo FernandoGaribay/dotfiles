@@ -33,10 +33,13 @@ sudo ln -s $HOME/.dotfiles/config/sddm.conf /etc/sddm.conf
 if [ ! -d "$HOME/.themes" ]; then
 	mkdir $HOME/.themes
 fi
-sudo ln -s $HOME/.dotfiles/themes/gtk-themes/DraculaTheme $HOME/.themes/DraculaTheme
+ln -s $HOME/.dotfiles/themes/gtk-themes/DraculaTheme $HOME/.themes/DraculaTheme
 
-# GTK Icons
+# GTK Icons and cursors
 if [ ! -d "$HOME/.icons" ]; then
 	mkdir $HOME/.icons
 fi
-sudo ln -s $HOME/.dotfiles/themes/icons/Wings-Light-Icons $HOME/.icons/Wings-Light-Icons
+	# icons
+ln -s $HOME/.dotfiles/themes/icons/Wings-Light-Icons $HOME/.icons/Wings-Light-Icons
+	#cursors
+ln -s $HOME/.dotfiles/themes/cursors/Bibata-Modern-Ice $HOME/.icons/Bibata-Modern-Ice
