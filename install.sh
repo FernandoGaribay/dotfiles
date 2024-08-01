@@ -61,4 +61,10 @@ echo "Installing sddm themes..."
 source $INSTALL_DIR/install_sddm_themes.sh
 
 echo "Installing gtk themes..."
-source $INSTALL_DIR/gtk_themes.sh
+source $INSTALL_DIR/gkt_theme.sh
+
+echo "Installing gtk icons..."
+source $INSTALL_DIR/gkt_icons.sh
+
+echo "Installing gtk cursors..."
+source $INSTALL_DIR/gkt_cursors.sh
