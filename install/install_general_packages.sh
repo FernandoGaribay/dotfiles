@@ -11,3 +11,4 @@ for i in "${packagesPacman[@]}"; do
 done
 
 xdg-user-dirs-update
+cp /home/$(whoami)/.dotfiles/wallpapers /home/$(whoami)/Pictures
