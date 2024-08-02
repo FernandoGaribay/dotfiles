@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./packages/general_packages.sh
+source /home/$(whoami)/.dotfiles/install/packages/general_packages.sh
 
 for i in "${packagesPacman[@]}"; do
   if pacman -Si "$i" &>/dev/null; then

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./packages/fonts.sh
+source /home/$(whoami)/.dotfiles/install/packages/fonts.sh
 
 for i in "${fonts[@]}"; do
   if pacman -Si "$i" &>/dev/null; then

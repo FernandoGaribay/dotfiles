@@ -48,9 +48,6 @@ source $INSTALL_DIR/install_fonts.sh
 echo "Enabling services..."
 source $INSTALL_DIR/enable_services.sh
 
-echo "Setting symbolic links..."
-source $INSTALL_DIR/symbolic_links.sh
-
 echo "Installing oh my zsh..."
 source $INSTALL_DIR/install_ho_my_zsh.sh
 
@@ -68,3 +65,6 @@ source $INSTALL_DIR/gkt_icons.sh
 
 echo "Installing gtk cursors..."
 source $INSTALL_DIR/gkt_cursors.sh
+
+echo "Setting symbolic links..."
+source $INSTALL_DIR/symbolic_links.sh

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./packages/yay_packages.sh
+source /home/$(whoami)/.dotfiles/install/packages/yay_packages.sh
 
 for i in "${packagesYay[@]}"; do
   if yay -Si "$i" &>/dev/null; then

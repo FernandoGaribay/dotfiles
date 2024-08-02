@@ -19,6 +19,7 @@ packagesPacman=(
   "kitty"
   "libvirt"
   "lsd"
+  "thunar"
   "lxappearance"
   "neovim"
   "networkmanager"
