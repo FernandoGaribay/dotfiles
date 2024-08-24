@@ -48,14 +48,11 @@ source $INSTALL_DIR/install_yay_packages.sh
 echo "Enabling services..."
 source $INSTALL_DIR/enable_services.sh
 
-echo "Installing oh my zsh..."
-source $INSTALL_DIR/install_ho_my_zsh.sh
-
-echo "Installing zsh pluggins..."
-source $INSTALL_DIR/install_zsh_plugins.sh
-
 echo "Installing sddm themes..."
 source $INSTALL_DIR/install_sddm_themes.sh
+
+echo "Writing scrips on Xsetup..."
+source $INSTALL_DIR/scripts_xsetup.sh
 
 echo "Installing gtk themes..."
 source $INSTALL_DIR/gkt_theme.sh
@@ -69,5 +66,14 @@ source $INSTALL_DIR/gkt_cursors.sh
 echo "Setting symbolic links..."
 source $INSTALL_DIR/symbolic_links.sh
 
+echo "Setting files..."
+source $INSTALL_DIR/copy_files.sh
+
 echo "Cleaning packages..."
 source $INSTALL_DIR/orphans_packages.sh
+
+echo "Installing oh my zsh..."
+source $INSTALL_DIR/install_ho_my_zsh.sh
+
+echo "Installing zsh pluggins..."
+source $INSTALL_DIR/install_zsh_plugins.sh
