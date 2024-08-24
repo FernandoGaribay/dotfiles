@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mv wallpapers $HOME/Pictures/
+mv $HOME/.dotfiles/wallpapers $HOME/Pictures/
 bash $HOME/.config/qtile/wallpaper.sh
