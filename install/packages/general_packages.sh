@@ -39,6 +39,7 @@ packagesPacman=(
   "unrar"
   "unzip"
   "virt-manager"
+  "bridge-utils"
   "xarchiver"
   "xdg-user-dirs"
   "xorg-xinput"
