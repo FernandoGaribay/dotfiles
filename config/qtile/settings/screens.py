@@ -25,7 +25,7 @@ screens = [
                 get_active_connection_widget(),
                 widget.Net(
                     **decor_right,
-                    format='󰓅  <b>{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}</b>',
+                    format="󰓅  <b>{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}</b>",
                     padding=10,
                     background=Color4,
                     fontshadow=colorNegro,
@@ -58,24 +58,24 @@ screens = [
                 Spacer(10, colorBarra),
                 widget.WindowName(max_chars=40),
                 widget.Spacer(**decor_right, length=30),
-
                 CurrentLayout(),
                 widget.CPU(
-                    fmt='  <b>{}</b>',
+                    fmt="  <b>{}</b>",
                     background=Color3,
                     fontshadow=colorNegro,
                 ),
                 widget.ThermalSensor(
                     **decor_right,
-                    tag_sensor='Tctl',
-                    format=' <b>{temp:.0f}{unit}</b>',
+                    tag_sensor="Tctl",
+                    format=" <b>{temp:.0f}{unit}</b>",
                     background=Color3,
                     padding=10,
                     fontshadow=colorNegro,
                 ),
                 widget.NvidiaSensors(
                     **decor_right,
-                    threshold=75, foreground_alert='ff6000',
+                    threshold=75,
+                    foreground_alert="ff6000",
                     fmt="󰺵  <b>{}</b>",
                     padding=10,
                     background=Color5,
@@ -99,4 +99,3 @@ screens = [
         ),
     ),
 ]
-
