@@ -114,7 +114,7 @@ cat ~/.cache/wal/sequences
 # Aplications
 alias c='clear'
 alias ff='fastfetch'
-alias ffc='echo "";fastfetch --config .config/fastfetch/example21.jsonc;echo""'
+alias ffc='echo "";fastfetch --config ~/.dotfiles/config/fastfetch/fastfetch_console.jsonc;echo""'
 alias vim='nvim'
 alias cat='bat'
 alias ls='lsd'
@@ -129,9 +129,8 @@ alias shutdown='systemctl poweroff'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias setkb='setxkbmap latam;echo "Keyboard Layout updated: latam."'
 
-
 if [[ $- == *i* ]]; then
   echo ""
-  fastfetch --config ~/.config/fastfetch/example21.jsonc
+  fastfetch --config ~/.config/fastfetch/fastfetch_console.jsonc
   echo ""
 fi
