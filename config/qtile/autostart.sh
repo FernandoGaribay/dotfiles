@@ -1,20 +1,16 @@
 #!/bin/sh
 
-# Configuracion de monitores
-xrandr --output DP-1 --mode 1280x768 --pos 0x156 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --rate 75 --pos 1280x0 --rotate normal &
+# Sensitivity
+xinput --set-prop 12 "libinput Accel Speed" -0.4 &
 
-# Configuracion del teclado en latinoamerica
+# Keyboard layout
 setxkbmap latam &
 
-# Inicializar Picom para efectos visuales
-picom -f --xrender-sync-fence &
+# Picom
+picom &
 
-# Inicializar nitrogen (fondo de pantalla)
-#nitrogen --restore &
+# Wallpaper script
 bash ~/.config/qtile/wallpaper.sh init &
 
-xinput --set-prop 12 "libinput Accel Speed" -0.3 &
-
-# Iconos del sistema
-#pipewire &
-#pipewire-pulse &
+# Configuracion de monitores
+xrandr --output DP-0 --off --output DP-1 --mode 1280x768 --pos 0x156 --rotate normal --output DP-2 --off --output DP-3 --off --output HDMI-0 --primary --mode 1920x1080 --pos 1280x0 --rotate normal --output DP-4 --off --output DP-5 --off --output HDMI-1-2 --off --output DVI-D-1-1 --off --output HDMI-1-3 --off &
