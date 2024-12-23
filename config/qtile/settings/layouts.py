@@ -19,12 +19,12 @@ layout_conf_screen2 = {
 
 layouts = [
     layout.MonadTall(**layout_conf_screen1),
+    layout.Bsp(**layout_conf_screen1),
     layout.Max(margin=[0, 10, 5, 10]),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
     # layout.Matrix(),
-    # layout.Columns(**layout_conf_screen1),
+    # layout.Columns(),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
