@@ -2,9 +2,6 @@
 
 PREDEFINED_DOTS_PATH="/home/$(whoami)/.dotfiles"
 INSTALL_DIR="/home/$(whoami)/.dotfiles/install"
-SCRIPT_PATH="$(readlink -f "$0")"
-DOTFILES_PATH="$(dirname "$SCRIPT_PATH")"
-source $(dirname "$0")/install/colors.sh
 
 echo -e "
     ######################################################################
@@ -33,110 +30,140 @@ width=$(tput cols)
 line=$(printf '%*s' "$width" '' | tr ' ' '-')
 
 echo "$line"
-echo "    [1/17] UPDATING SYSTEM..."
+echo "    [1/16] UPDATING SYSTEM..."
 echo -e "$line\n"
 sleep 1
-# source $INSTALL_DIR/update_system.sh
+
+source $INSTALL_DIR/update_system.sh
+echo -e "\n"
+
 
 echo "$line"
-echo "    [2/17] MOVING DOTFILES DIRECTORY FROM $DOTFILES_PATH TO $PREDEFINED_DOTS_PATH..."
+echo "    [2/16] MOVING DOTFILES DIRECTORY FROM $DOTFILES_PATH TO $PREDEFINED_DOTS_PATH..."
 echo -e "$line\n"
 sleep 1
 
-# if ! mv $DOTFILES_PATH $PREDEFINED_DOTS_PATH; then
-#   echo "${RED_ERROR}Error moving the directory to $PREDEFINED_DOTS_PATH${NC}"
-#   exit 1
-# fi
+source $INSTALL_DIR/move_dots_directory.sh
+echo -e "\n"
 
-# echo "$line"
-# echo "    [3/17] INSTALLING PACMAN PACKAGES..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/install_general_packages.sh
 
-# echo "$line"
-# echo "    [4/17] INSTALLING YAY (Yet Another Yaourt)..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/install_yay.sh
+echo "$line"
+echo "    [3/16] INSTALLING PACMAN PACKAGES..."
+echo -e "$line\n"
+sleep 1
 
-# echo "$line"
-# echo "    [5/17] INSTALLING YAY PACKAGES..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/install_yay_packages.sh
+source $INSTALL_DIR/install_pacman_packages.sh
+echo -e "\n"
 
-# echo "$line"
-# echo "    [6/17] INSTALLING REQUIRED FONTS..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/install_fonts.sh
 
-# echo "$line"
-# echo "    [7/17] ENABLING SERVICES..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/enable_services.sh
+echo "$line"
+echo "    [4/16] INSTALLING YAY (Yet Another Yaourt)..."
+echo -e "$line\n"
+sleep 1
 
-# echo "$line"
-# echo "    [8/17] INSTALLING SDDM THEMES..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/install_sddm_themes.sh
+source $INSTALL_DIR/install_yay.sh
+echo -e "\n"
 
-# echo "$line"
-# echo "    [9/17] WRITING SCRIPTS ON XSETUP..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/scripts_xsetup.sh
 
-# echo "$line"
-# echo "    [10/17] INSTALLING GTK THEMES..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/gkt_theme.sh
+echo "$line"
+echo "    [5/16] INSTALLING YAY PACKAGES..."
+echo -e "$line\n"
+sleep 1
 
-# echo "$line"
-# echo "    [11/17] INSTALLING GTK ICONS..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/gkt_icons.sh
+source $INSTALL_DIR/install_yay_packages.sh
+echo -e "\n"
 
-# echo "$line"
-# echo "    [12/17] INSTALLING GTK CURSORS..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/gkt_cursors.sh
 
-# echo "$line"
-# echo "    [13/17] SETTING SYMBOLIC LINKS..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/symbolic_links.sh
+echo "$line"
+echo "    [6/16] INSTALLING REQUIRED FONTS..."
+echo -e "$line\n"
+sleep 1
 
-# echo "$line"
-# echo "    [14/17] SETTING FILES..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/copy_files.sh
+source $INSTALL_DIR/install_fonts.sh
+echo -e "\n"
 
-# echo "$line"
-# echo "    [15/17] CLEANING ORPHAN PACKAGES..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/orphans_packages.sh
+echo "$line"
+echo "    [7/16] ENABLING SERVICES..."
+echo -e "$line\n"
+sleep 1
 
-# echo "$line"
-# echo "    [16/17] INSTALLING OH MY ZSH..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/install_ho_my_zsh.sh
+source $INSTALL_DIR/enable_services.sh
+echo -e "\n"
 
-# echo "$line"
-# echo "    [17/17] INSTALLING ZSH PLUGGINS..."
-# echo -e "$line\n"
-# sleep 1
-# # source $INSTALL_DIR/install_zsh_plugins.sh
+
+echo "$line"
+echo "    [8/16] INSTALLING SDDM THEMES..."
+echo -e "$line\n"
+sleep 1
+
+source $INSTALL_DIR/install_sddm_themes.sh
+echo -e "\n"
+
+
+echo "$line"
+echo "    [12/16] SETTING SYMBOLIC LINKS..."
+echo -e "$line\n"
+sleep 1
+
+source $INSTALL_DIR/symbolic_links.sh
+echo -e "\n"
+
+
+echo "$line"
+echo "    [9/16] INSTALLING GTK THEMES..."
+echo -e "$line\n"
+sleep 1
+
+source $INSTALL_DIR/gkt_theme.sh
+echo -e "\n"
+
+
+echo "$line"
+echo "    [10/16] INSTALLING GTK ICONS..."
+echo -e "$line\n"
+sleep 1
+
+source $INSTALL_DIR/gkt_icons.sh
+echo -e "\n"
+
+
+echo "$line"
+echo "    [11/16] INSTALLING GTK CURSORS..."
+echo -e "$line\n"
+sleep 1
+source $INSTALL_DIR/gkt_cursors.sh
+echo -e "\n"
+
+
+echo "$line"
+echo "    [13/16] INSTALLING SYSTEM APPS..."
+echo -e "$line\n"
+sleep 1
+
+source $INSTALL_DIR/install_system_apps.sh
+echo -e "\n"
+
+
+echo "$line"
+echo "    [14/16] CLEANING ORPHAN PACKAGES..."
+echo -e "$line\n"
+sleep 1
+source $INSTALL_DIR/orphans_packages.sh
+echo -e "\n"
+
+
+echo "$line"
+echo "    [15/16] INSTALLING OH MY ZSH..."
+echo -e "$line\n"
+sleep 1
+source $INSTALL_DIR/install_ho_my_zsh.sh
+
+
+echo "$line"
+echo "    [16/16] INSTALLING ZSH PLUGGINS..."
+echo -e "$line\n"
+sleep 1
+source $INSTALL_DIR/install_zsh_plugins.sh
 
 echo "
     ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗      █████╗ ████████╗██╗ ██████╗ ███╗   ██╗
