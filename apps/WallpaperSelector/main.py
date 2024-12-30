@@ -1,3 +1,5 @@
+#!/opt/WallpaperSelector/venv/bin/python
+
 import gi
 import os
 
