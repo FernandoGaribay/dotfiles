@@ -30,20 +30,18 @@ width=$(tput cols)
 line=$(printf '%*s' "$width" '' | tr ' ' '-')
 
 echo "$line"
-echo "    [1/16] UPDATING SYSTEM..."
+echo "    [1/16] MOVING DOTFILES DIRECTORY FROM $DOTFILES_PATH TO $PREDEFINED_DOTS_PATH..."
 echo -e "$line\n"
 sleep 1
-
-source $INSTALL_DIR/update_system.sh
-echo -e "\n"
+source "$(dirname "$(realpath "$0")")/install/move_dots_directory.sh"
+echo -e "${DOTFILES_PATH}\n"
 
 
 echo "$line"
-echo "    [2/16] MOVING DOTFILES DIRECTORY FROM $DOTFILES_PATH TO $PREDEFINED_DOTS_PATH..."
+echo "    [2/16] UPDATING SYSTEM..."
 echo -e "$line\n"
 sleep 1
-
-source $INSTALL_DIR/move_dots_directory.sh
+source $INSTALL_DIR/update_system.sh
 echo -e "\n"
 
 
@@ -51,7 +49,6 @@ echo "$line"
 echo "    [3/16] INSTALLING PACMAN PACKAGES..."
 echo -e "$line\n"
 sleep 1
-
 source $INSTALL_DIR/install_pacman_packages.sh
 echo -e "\n"
 
@@ -60,7 +57,6 @@ echo "$line"
 echo "    [4/16] INSTALLING YAY (Yet Another Yaourt)..."
 echo -e "$line\n"
 sleep 1
-
 source $INSTALL_DIR/install_yay.sh
 echo -e "\n"
 
@@ -69,7 +65,6 @@ echo "$line"
 echo "    [5/16] INSTALLING YAY PACKAGES..."
 echo -e "$line\n"
 sleep 1
-
 source $INSTALL_DIR/install_yay_packages.sh
 echo -e "\n"
 
@@ -78,15 +73,14 @@ echo "$line"
 echo "    [6/16] INSTALLING REQUIRED FONTS..."
 echo -e "$line\n"
 sleep 1
-
 source $INSTALL_DIR/install_fonts.sh
 echo -e "\n"
+
 
 echo "$line"
 echo "    [7/16] ENABLING SERVICES..."
 echo -e "$line\n"
 sleep 1
-
 source $INSTALL_DIR/enable_services.sh
 echo -e "\n"
 
@@ -95,40 +89,36 @@ echo "$line"
 echo "    [8/16] INSTALLING SDDM THEMES..."
 echo -e "$line\n"
 sleep 1
-
 source $INSTALL_DIR/install_sddm_themes.sh
 echo -e "\n"
 
 
 echo "$line"
-echo "    [12/16] SETTING SYMBOLIC LINKS..."
+echo "    [9/16] SETTING SYMBOLIC LINKS..."
 echo -e "$line\n"
 sleep 1
-
 source $INSTALL_DIR/symbolic_links.sh
 echo -e "\n"
 
 
 echo "$line"
-echo "    [9/16] INSTALLING GTK THEMES..."
+echo "    [10/16] INSTALLING GTK THEMES..."
 echo -e "$line\n"
 sleep 1
-
 source $INSTALL_DIR/gkt_theme.sh
 echo -e "\n"
 
 
 echo "$line"
-echo "    [10/16] INSTALLING GTK ICONS..."
+echo "    [11/16] INSTALLING GTK ICONS..."
 echo -e "$line\n"
 sleep 1
-
 source $INSTALL_DIR/gkt_icons.sh
 echo -e "\n"
 
 
 echo "$line"
-echo "    [11/16] INSTALLING GTK CURSORS..."
+echo "    [12/16] INSTALLING GTK CURSORS..."
 echo -e "$line\n"
 sleep 1
 source $INSTALL_DIR/gkt_cursors.sh
@@ -139,7 +129,6 @@ echo "$line"
 echo "    [13/16] INSTALLING SYSTEM APPS..."
 echo -e "$line\n"
 sleep 1
-
 source $INSTALL_DIR/install_system_apps.sh
 echo -e "\n"
 
