@@ -12,7 +12,8 @@ reset_color() {
 }
 
 RED_ERROR=$(set_color 255 0 0)
-GREEN=$(set_color 0 255 0)
-YELLOW=$(set_color 255 255 0)
-BLUE=$(set_color 0 0 255)
+DARK_YELLOW=$(set_color 230 230 80)
+DARK_GREEN=$(set_color 35 175 50)
+DARK_BLUE=$(set_color 50 125 185)
+
 NC=$(reset_color)
