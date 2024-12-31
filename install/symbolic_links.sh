@@ -6,9 +6,6 @@ source /home/$(whoami)/.dotfiles/install/colors.sh
 ln -sf $HOME/.dotfiles/config/qtile $HOME/.config/qtile
 echo "  > ${DARK_BLUE}Symbolic link${NC} created: ${DARK_GREEN}$HOME/.dotfiles/config/qtile${NC} -> ${DARK_YELLOW}$HOME/.config/qtile${NC}"
 
-ln -sf $HOME/.dotfiles/config/rofi $HOME/.config/qtile/rofi-menus/rofi
-echo "  > ${DARK_BLUE}Symbolic link${NC} created: ${DARK_GREEN}$HOME/.dotfiles/config/rofi${NC} -> ${DARK_YELLOW}$HOME/.config/qtile/rofi-menus/rofi${NC}"
-
 # fastfetch
 ln -sf $HOME/.dotfiles/config/fastfetch $HOME/.config/fastfetch
 echo "  > ${DARK_BLUE}Symbolic link${NC} created: ${DARK_GREEN}$HOME/.dotfiles/config/fastfetch${NC} -> ${DARK_YELLOW}$HOME/.config/fastfetch${NC}"
