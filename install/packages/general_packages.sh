@@ -23,7 +23,6 @@ packagesPacman=(
   "lxappearance"
   "neovim"
   "networkmanager"
-  "p7zip"
   "pavucontrol"
   "pipewire"
   "pipewire-pulse"
