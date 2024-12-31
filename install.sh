@@ -3,6 +3,7 @@
 PREDEFINED_DOTS_PATH="/home/$(whoami)/.dotfiles"
 INSTALL_DIR="/home/$(whoami)/.dotfiles/install"
 
+clear
 echo -e "
     ######################################################################
 
