@@ -3,7 +3,7 @@
 source /home/$(whoami)/.dotfiles/install/colors.sh
 
 mv $HOME/.dotfiles/wallpapers $HOME/Pictures/
-bash $HOME/.config/qtile/wallpaper.sh
+bash $HOME/.config/qtile/wallpaper.sh silent
 
 WALLPAPER_SELECTOR_PATH="/home/$(whoami)/.dotfiles/apps/WallpaperSelector"
 DESKTOP_FILE="/usr/share/applications/wallpaperselector.desktop"
