@@ -185,3 +185,4 @@ for i in {3..0}; do
   echo -n "$i"
 done
 sleep 1
+reboot
