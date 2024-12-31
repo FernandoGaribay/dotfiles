@@ -5,7 +5,7 @@ source /home/$(whoami)/.dotfiles/install/packages/general_packages.sh
 
 for i in "${packagesPacman[@]}"; do
   if pacman -Si "$i" &>/dev/null; then
-    echo -e "  > Installing ${DARK_GREEN}package ${DARK_BLUE}'$i'${NC}..."
+    echo -e "\n  > Installing ${DARK_GREEN}package ${DARK_BLUE}'$i'${NC}...\n"
     sudo pacman -S --noconfirm $i
   else
     echo -e "  > ${RED_ERROR}Error:${NC} The ${DARK_BLUE}package${NC} ${DARK_GREEN}'$i'${NC} is not available in the repositories.\n"
