@@ -26,11 +26,16 @@ case $1 in
   wal -q -i $current_wallpaper
   notify-send -i ~/.local/share/icons/dunst/image.png "Wallpaper reloaded" "$current_wallpaper"
   ;;
-
 # Load wallpaper from path
 "path")
   wal -q -i $2
   set_up_wallpaper
+  ;;
+# Load wallpaper from .cache whitout notification
+"silent")
+  current_wallpaper=$(cat "$cache_currentWallpaper")
+  wal -q -i $current_wallpaper
+  source "$HOME/.cache/wal/colors.sh"
   ;;
 
 # Randomly select wallpaper
