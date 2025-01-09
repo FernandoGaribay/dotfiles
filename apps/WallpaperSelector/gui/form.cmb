@@ -14,9 +14,7 @@
 	(1,1,"GtkWindow","default-height","800",None,None,None,None,None,None,None,None,None),
 	(1,1,"GtkWindow","default-width","600",None,None,None,None,None,None,None,None,None),
 	(1,1,"GtkWindow","resizable","False",None,None,None,None,None,None,None,None,None),
-	(1,3,"GtkGrid","column-homogeneous","True",None,None,None,None,None,None,None,None,None),
 	(1,3,"GtkGrid","column-spacing","5",None,None,None,None,None,None,None,None,None),
-	(1,3,"GtkGrid","row-homogeneous","True",None,None,None,None,None,None,None,None,None),
 	(1,3,"GtkGrid","row-spacing","5",None,None,None,None,None,None,None,None,None),
 	(1,3,"GtkWidget","margin","10",None,None,None,None,None,None,None,None,None)
   </object_property>

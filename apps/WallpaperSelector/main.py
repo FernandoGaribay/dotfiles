@@ -24,7 +24,7 @@ class SystrayApp:
         self.indicator.connect("popup-menu", self.on_right_click)
 
         self.builder = Gtk.Builder()
-        image_path = os.path.join(script_dir, "ui", "form.ui")
+        image_path = os.path.join(script_dir, "gui/ui", "form.ui")
         self.builder.add_from_file(image_path)
 
         self.grid = self.builder.get_object("grid")
@@ -82,30 +82,39 @@ class SystrayApp:
             print(f"Error: {wallpapers_path} not found.")
             return
 
-        files = os.listdir(wallpapers_path)
+        files = [
+            f
+            for f in os.listdir(wallpapers_path)
+            if f.lower().endswith((".png", ".jpg", ".jpeg", ".gif"))
+        ]
+
+        if not files:
+            print("No wallpapers found.")
+            return
+
+        max_columns = 3  # Número máximo de columnas
         row = 0
         column = 0
 
         for file_name in files:
             file_path = os.path.join(wallpapers_path, file_name)
 
-            if file_name.lower().endswith((".png", ".jpg", ".jpeg", ".gif")):
-                try:
-                    with Image.open(file_path) as img:
-                        width, height = img.size
-                except Exception as e:
-                    print(f"{e}")
-                    continue
+            try:
+                with Image.open(file_path) as img:
+                    width, height = img.size
+            except Exception as e:
+                print(f"{e}")
+                continue
 
-                wallpaper_widget = WallpaperWidget(
-                    file_name, f"{width}x{height}", file_path
-                )
-                grid.attach(wallpaper_widget, column, row, 1, 1)
+            wallpaper_widget = WallpaperWidget(
+                file_name, f"{width}x{height}", file_path
+            )
+            grid.attach(wallpaper_widget, column, row, 1, 1)
 
+            row += 1
+            if row >= len(files) // max_columns + (len(files) % max_columns > 0):
+                row = 0
                 column += 1
-                if column >= 3:
-                    column = 0
-                    row += 1
 
     def run(self):
         GLib.idle_add(self.window.hide)
