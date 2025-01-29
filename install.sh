@@ -95,15 +95,7 @@ echo -e "\n"
 
 
 echo "$line"
-echo "    [9/16] SETTING SYMBOLIC LINKS..."
-echo -e "$line\n"
-sleep 1
-source $INSTALL_DIR/symbolic_links.sh
-echo -e "\n"
-
-
-echo "$line"
-echo "    [10/16] INSTALLING GTK THEMES..."
+echo "    [9/16] INSTALLING GTK THEMES..."
 echo -e "$line\n"
 sleep 1
 source $INSTALL_DIR/gkt_theme.sh
@@ -111,7 +103,7 @@ echo -e "\n"
 
 
 echo "$line"
-echo "    [11/16] INSTALLING GTK ICONS..."
+echo "    [10/16] INSTALLING GTK ICONS..."
 echo -e "$line\n"
 sleep 1
 source $INSTALL_DIR/gkt_icons.sh
@@ -119,7 +111,7 @@ echo -e "\n"
 
 
 echo "$line"
-echo "    [12/16] INSTALLING GTK CURSORS..."
+echo "    [11/16] INSTALLING GTK CURSORS..."
 echo -e "$line\n"
 sleep 1
 source $INSTALL_DIR/gkt_cursors.sh
@@ -127,7 +119,7 @@ echo -e "\n"
 
 
 echo "$line"
-echo "    [13/16] INSTALLING SYSTEM APPS..."
+echo "    [12/16] INSTALLING SYSTEM APPS..."
 echo -e "$line\n"
 sleep 1
 source $INSTALL_DIR/install_system_apps.sh
@@ -135,7 +127,21 @@ echo -e "\n"
 
 
 echo "$line"
-echo "    [14/16] CLEANING ORPHAN PACKAGES..."
+echo "    [13/16] INSTALLING OH MY ZSH..."
+echo -e "$line\n"
+sleep 1
+source $INSTALL_DIR/install_ho_my_zsh.sh
+
+
+echo "$line"
+echo "    [14/16] INSTALLING ZSH PLUGGINS..."
+echo -e "$line\n"
+sleep 1
+source $INSTALL_DIR/install_zsh_plugins.sh
+
+
+echo "$line"
+echo "    [15/16] CLEANING ORPHAN PACKAGES..."
 echo -e "$line\n"
 sleep 1
 source $INSTALL_DIR/orphans_packages.sh
@@ -143,17 +149,12 @@ echo -e "\n"
 
 
 echo "$line"
-echo "    [15/16] INSTALLING OH MY ZSH..."
+echo "    [16/16] SETTING SYMBOLIC LINKS..."
 echo -e "$line\n"
 sleep 1
-source $INSTALL_DIR/install_ho_my_zsh.sh
+source $INSTALL_DIR/symbolic_links.sh
+echo -e "\n"
 
-
-echo "$line"
-echo "    [16/16] INSTALLING ZSH PLUGGINS..."
-echo -e "$line\n"
-sleep 1
-source $INSTALL_DIR/install_zsh_plugins.sh
 
 echo "
     ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗      █████╗ ████████╗██╗ ██████╗ ███╗   ██╗
