@@ -1,8 +1,6 @@
 packagesPacman=(
   "curl"
   "arandr"
-  "base"
-  "base-devel"
   "bat"
   "calcurse"
   "code"
@@ -39,4 +37,6 @@ packagesPacman=(
   "zsh"
   "qt5-quickcontrols"
   "qt5-quickcontrols2"
+  "copyq"
+  "lazygit"
 )
