@@ -37,6 +37,7 @@ packagesPacman=(
   "zsh"
   "qt5-quickcontrols"
   "qt5-quickcontrols2"
+  "network-manager-applet"
   "copyq"
   "lazygit"
 )
