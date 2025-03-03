@@ -15,7 +15,7 @@ sleep 1
 picom --backend glx --vsync --xrender-sync-fence --no-use-damage &
 
 # Wallpaper script
-bash ~/.config/qtile/wallpaper.sh init &
+bash ~/.config/qtile/wallpaper.sh silent &
 
 sleep 1
 
