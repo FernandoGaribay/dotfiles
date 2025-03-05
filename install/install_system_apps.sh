@@ -5,6 +5,8 @@ source /home/$(whoami)/.dotfiles/install/colors.sh
 mv $HOME/.dotfiles/wallpapers $HOME/Pictures/
 bash $HOME/.config/qtile/wallpaper.sh silent
 
+betterlockscreen -u $HOME/Pictures/wallpapers/default.jpg --desc "Session locked. Enter password to continue."
+
 WALLPAPER_SELECTOR_PATH="/home/$(whoami)/.dotfiles/apps/WallpaperSelector"
 DESKTOP_FILE="/usr/share/applications/wallpaperselector.desktop"
 
