@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Configuracion de monitores
-xrandr --output HDMI-0 --primary --mode 1920x1080 --pos 1280x0 --rotate normal --output DP-1 --mode 1280x768 --pos 0x156 --rotate normal &
+xrandr --output DP-1 --mode 1280x768 --pos 274x0 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 0x768 --rotate normal &
 
 # Sensitivity
 xinput --set-prop 12 "libinput Accel Speed" -0.4 &
