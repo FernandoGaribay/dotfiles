@@ -15,6 +15,7 @@ packagesPacman=(
   "kitty"
   "lsd"
   "thunar"
+  "gvfs"
   "lxappearance"
   "neovim"
   "networkmanager"
