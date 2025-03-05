@@ -88,7 +88,7 @@ $reboot)
   ;;
 $lock)
   if [[ -x '/usr/bin/betterlockscreen' ]]; then
-    betterlockscreen -l
+    betterlockscreen -l --off 30 --time-format "%I:%M:%S %p" --show-layout 
   elif [[ -x '/usr/bin/i3lock' ]]; then
     i3lock
   fi
