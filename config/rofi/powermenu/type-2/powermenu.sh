@@ -68,7 +68,9 @@ run_cmd() {
       systemctl reboot
     elif [[ $1 == '--suspend' ]]; then
       killall picom
-      betterlockscreen --suspend
+      sleep 0.5
+      betterlockscreen --suspend --off 30 --time-format "%I:%M:%S %p" --show-layout
+      picom
     elif [[ $1 == '--logout' ]]; then
       qtile cmd-obj -o cmd -f shutdown
     fi
