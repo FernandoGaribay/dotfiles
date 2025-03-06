@@ -19,7 +19,7 @@ class SystrayApp:
         image_path = os.path.join(script_dir, "resources", "wallpaper-icon.png")
         pixbuf = GdkPixbuf.Pixbuf.new_from_file(image_path)
         self.indicator.set_from_pixbuf(pixbuf)
-        self.indicator.set_tooltip_text("Wallpaper Selector/")
+        self.indicator.set_tooltip_text("Wallpaper Selector")
         self.indicator.connect("activate", self.on_activate)
         self.indicator.connect("popup-menu", self.on_right_click)
 
