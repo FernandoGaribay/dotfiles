@@ -54,6 +54,12 @@ keys = [
         lazy.spawn(home + "/.config/rofi/launchers/type-2/launcher.sh"),
         desc="Abrir menu Rofi",
     ),
+    Key(
+        [mod],
+        "c",
+        lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort"),
+        desc="Abrir menu Rofi",
+    ),
     # Launch browser
     Key([mod], "f", lazy.spawn("brave"), desc="Abrir brave"),
     # Launch shutdown options
