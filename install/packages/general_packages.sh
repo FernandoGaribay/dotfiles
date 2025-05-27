@@ -16,7 +16,7 @@ packagesPacman=(
   "lsd"
   "thunar"
   "gvfs"
-  "lxappearance"
+  "lxappearance-gtk3"
   "neovim"
   "networkmanager"
   "pavucontrol"
@@ -41,4 +41,6 @@ packagesPacman=(
   "network-manager-applet"
   "copyq"
   "lazygit"
+  "qt6-svg"
+  "qt6-declarative"
 )
