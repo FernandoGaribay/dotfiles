@@ -12,7 +12,7 @@ setxkbmap latam &
 sleep 1
 
 # Picom
-picom --backend glx --vsync --xrender-sync-fence --no-use-damage &
+picom --daemon &
 
 # Wallpaper script
 bash ~/.config/qtile/wallpaper.sh silent &
