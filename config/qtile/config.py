@@ -76,3 +76,13 @@ wmname = "LG3D"
 def autostart():
     script = os.path.expanduser("~/.config/qtile/autostart.sh")
     subprocess.run([script])
+
+@hook.subscribe.client_new
+def set_floating(window):
+    floating_classes = [
+        "steam_app_2666510",
+        "shimeji-pet-ShimejiPet",
+        "pavucontrol"
+    ]
+    if window.window.get_wm_class() and window.window.get_wm_class()[0] in floating_classes:
+        window.floating = True
