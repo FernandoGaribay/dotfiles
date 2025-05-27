@@ -141,6 +141,12 @@ source $INSTALL_DIR/install_zsh_plugins.sh
 
 
 echo "$line"
+echo "    [14/16] INSTALLING PICOM FORK..."
+echo -e "$line\n"
+sleep 1
+source $INSTALL_DIR/install_picom.sh
+
+echo "$line"
 echo "    [15/16] CLEANING ORPHAN PACKAGES..."
 echo -e "$line\n"
 sleep 1
