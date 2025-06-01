@@ -12,7 +12,7 @@ setxkbmap latam &
 sleep 1
 
 # Picom
-picom --daemon &
+# picom --daemon &
 
 # Wallpaper script
 bash ~/.config/qtile/wallpaper.sh silent &
