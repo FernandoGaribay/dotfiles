@@ -3,7 +3,7 @@
 source /home/$(whoami)/.dotfiles/install/colors.sh
 
 mv $HOME/.dotfiles/wallpapers $HOME/Pictures/
-bash $HOME/.config/qtile/wallpaper.sh silent
+bash $HOME/.dotfiles/config/qtile/wallpaper.sh
 
 betterlockscreen -u $HOME/Pictures/wallpapers/default.jpg --desc "Session locked. Enter password to continue."
 
