@@ -34,6 +34,10 @@ echo "  > ${DARK_BLUE}Symbolic link${NC} created: ${DARK_GREEN}$HOME/.dotfiles/c
 ln -sf $HOME/.dotfiles/config/redshift $HOME/.config/redshift
 echo "  > ${DARK_BLUE}Symbolic link${NC} created: ${DARK_GREEN}$HOME/.dotfiles/config/redshift${NC} -> ${DARK_YELLOW}$HOME/.config/redshift${NC}"
 
+# Xresources
+ln -sf $HOME/.dotfiles/config/.Xresources $HOME/.Xresources
+echo "  > ${DARK_BLUE}Symbolic link${NC} created: ${DARK_GREEN}$HOME/.dotfiles/config/.Xresources${NC} -> ${DARK_YELLOW}$HOME/.Xresources${NC}"
+
 # SDDM config file
 sudo ln -sf $HOME/.dotfiles/config/sddm.conf /etc/sddm.conf
 echo "  > ${DARK_BLUE}Symbolic link${NC} created: ${DARK_GREEN}$HOME/.dotfiles/config/sddm.conf${NC} -> ${DARK_YELLOW}/etc/sddm.conf${NC}"
