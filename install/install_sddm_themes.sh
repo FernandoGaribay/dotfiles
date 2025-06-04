@@ -16,7 +16,7 @@ fi
 if ! [ -d $TEMP_DIR ]; then
     echo -e "\n  > Temp Directory: $TEMP_DIR created."
     sudo mkdir -p $TEMP_DIR
-    sudo chown -R $(whoami):$(whoami) "$TEMP_DIR"
+    sudo chown -R $(whoami):$(id -gn $(whoami)) "$TEMP_DIR"
 fi
 
 sudo pacman -S jq --noconfirm
